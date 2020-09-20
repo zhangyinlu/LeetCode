@@ -49,9 +49,17 @@ int main()
     root1->left->left = new TreeNode(3);
     root1->left->right = new TreeNode(4);
 
-    auto res = solution.zigzagLevelOrder(roo1);
+    auto res = solution.zigzagLevelOrder(root1);
 
-   
+    for (auto iter : res)
+    {
+        for (auto n : iter)
+        {
+            cout << n << "\t";
+        }
+        cout << endl;
+    }
+
 
 
     return 0;

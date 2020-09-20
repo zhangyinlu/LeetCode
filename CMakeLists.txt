@@ -12,3 +12,4 @@ project("LeetCode")
 # 包含子项目。
 add_subdirectory("cmake")
 add_subdirectory("tree")
+add_subdirectory("backtracking")
