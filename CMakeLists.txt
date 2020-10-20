@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD 11)
 project("LeetCode")
 
 # 包含子项目。
-add_subdirectory("strings")
 add_subdirectory("tree")
 add_subdirectory("backtracking")
+add_subdirectory("strings")
+add_subdirectory("list")
