@@ -11,7 +11,7 @@ project("LeetCode")
 
 # 包含子项目。
 add_subdirectory("tree")
-add_subdirectory("backtracking")
+add_subdirectory("Backtracking")
 add_subdirectory("strings")
 add_subdirectory("list")
-add_subdirectory("剑指offer")
+add_subdirectory("SwordFingerOffer")
