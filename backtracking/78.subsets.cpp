@@ -16,7 +16,7 @@ public:
         return res;
     }
 
-    void subsets(vector<int>& nums, int cur, vector<int>& tmp, vector<vector<int>>& res)
+    void subsets(vector<int>& nums, size_t cur, vector<int>& tmp, vector<vector<int>>& res)
     {
         if (cur >= nums.size())
         {
