@@ -1,5 +1,0 @@
-file(GLOB SOURCE_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
-foreach(SOURCE_FILE ${SOURCE_FILES})
-    string(REPLACE ".cpp" "" EXE_NAME ${SOURCE_FILE})
-    add_executable(${EXE_NAME} ${SOURCE_FILE})
-endforeach(SOURCE_FILE ${SOURCE_FILES})
