@@ -9,7 +9,7 @@ public:
     vector<vector<int>> subsets(vector<int>& nums)
     {
         vector<vector<int>> res;
-        
+
         vector<int> tmp;
         subsets(nums, 0, tmp, res);
 
