@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
 //Definition for a binary tree node.
 struct TreeNode
 {
@@ -11,7 +9,6 @@ struct TreeNode
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -25,7 +22,6 @@ public:
         }
         return res;
     }
-
     void pathSum(TreeNode *root, int sum, vector<int> &path, vector<vector<int>> &res)
     {
         path.emplace_back(root->val);
@@ -48,15 +44,12 @@ public:
         return;
     }
 };
-
 int main()
 {
     Solution solution;
     TreeNode *root = new TreeNode(1);
     root->left = new TreeNode(2);
-
     auto res = solution.pathSum(root, 3);
-
     for (auto iter : res)
     {
         for (auto n : iter)
@@ -65,6 +58,5 @@ int main()
         }
         cout << endl;
     }
-
     return 0;
 }

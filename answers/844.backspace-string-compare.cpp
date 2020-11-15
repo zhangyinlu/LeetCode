@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
-
 class Solution
 {
 public:
@@ -31,11 +29,9 @@ public:
         return ret;
     }
 };
-
 int main()
 {
     Solution solution;
     cout << (solution.backspaceCompare("ab#c", "ad#c") ? "true" : "false") << endl;
-
     return 0;
 }

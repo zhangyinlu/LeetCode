@@ -1,9 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-
 using namespace std;
-
 //Definition for a binary tree node.
 struct TreeNode {
     int val;
@@ -11,7 +9,6 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -20,7 +17,6 @@ public:
         vector<vector<int>> res;
         queue<TreeNode*> q;
         if (root) q.push(root);
-
         bool lr = true;
         while (!q.empty())
         {
@@ -36,11 +32,9 @@ public:
             res.push_back(move(level));
             lr = !lr;
         }
-
         return res;
     }
 };
-
 int main()
 {
     Solution solution;
@@ -48,9 +42,7 @@ int main()
     root1->left = new TreeNode(2);
     root1->left->left = new TreeNode(3);
     root1->left->right = new TreeNode(4);
-
     auto res = solution.zigzagLevelOrder(root1);
-
     for (auto iter : res)
     {
         for (auto n : iter)
@@ -59,8 +51,5 @@ int main()
         }
         cout << endl;
     }
-
-
-
     return 0;
 }

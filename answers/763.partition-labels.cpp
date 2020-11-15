@@ -1,9 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
 using namespace std;
-
 class Solution
 {
 public:
@@ -33,7 +31,6 @@ public:
         return partition;
     }
 };
-
 template <class T>
 void printVec(vector<T> &vec)
 {
@@ -44,13 +41,10 @@ void printVec(vector<T> &vec)
     }
     cout << "]" << endl;
 }
-
 int main()
 {
     Solution solution;
     auto res = solution.partitionLabels("ababcbacadefegdehijhklij");
-
     printVec(res);
-
     return 0;
 }

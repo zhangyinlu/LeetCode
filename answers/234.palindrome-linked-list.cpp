@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 //Definition for singly-linked list.
 struct ListNode
 {
@@ -9,7 +7,6 @@ struct ListNode
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -21,7 +18,6 @@ public:
             slow = slow->next;
             fast = fast->next ? fast->next->next : fast->next;
         }
-
         while (slow)
         { //reverse
             ListNode *temp = slow->next;
@@ -41,15 +37,12 @@ public:
         return true;
     }
 };
-
 int main()
 {
     Solution solution;
     ListNode *head = new ListNode(0);
     head->next = new ListNode(1);
     head->next->next = new ListNode(0);
-
     cout << (solution.isPalindrome(head) ? "true" : "false") << endl;
-
     return 0;
 }

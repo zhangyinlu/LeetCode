@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
 //Definition for a binary tree node.
 struct TreeNode
 {
@@ -11,7 +9,6 @@ struct TreeNode
     TreeNode* right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -40,11 +37,9 @@ public:
                 break;
             }
         }
-
         return root;
     }
 };
-
 void printTree(TreeNode* node)
 {
     if (nullptr == node)
@@ -60,14 +55,11 @@ void printTree(TreeNode* node)
     printTree(node->left);
     printTree(node->right);
 }
-
 int main()
 {
     vector<int> pre = { 3,9,20,15,7 };
     vector<int> ino = { 9,3,15,20,7 };
-
     Solution solution;
     TreeNode* root = solution.buildTree(pre, ino);
-
     printTree(root);
 }

@@ -1,8 +1,6 @@
 #include <iostream>
 #include <unordered_map>
-
 using namespace std;
-
 class Solution
 {
 public:
@@ -31,11 +29,9 @@ public:
         return res;
     }
 };
-
 int main()
 {
     Solution solution;
     cout << solution.numTrees(3) << endl;
-
     return 0;
 }

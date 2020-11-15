@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
 //Definition for singly-linked list.
 struct ListNode
 {
@@ -12,7 +10,6 @@ struct ListNode
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-
 class Solution
 {
 public:
@@ -22,7 +19,6 @@ public:
         {
             return;
         }
-
         //使用快慢指针获取List的中间位置
         ListNode *slow = head, *fast = head;
         while (nullptr != fast->next && nullptr != fast->next->next)
@@ -33,7 +29,6 @@ public:
         ListNode *left = head;
         ListNode *right = slow->next;
         slow->next = nullptr;
-
         //翻转后半部分List列表
         ListNode *cur = right, *prev = nullptr;
         while (nullptr != cur)
@@ -44,17 +39,14 @@ public:
             cur = nextTmp;
         }
         right = prev;
-
         //合并左右两个数组
         ListNode *leftNextTmp = nullptr, *rightNextTmp = nullptr;
         while (nullptr != left && nullptr != right)
         {
             leftNextTmp = left->next;
             rightNextTmp = right->next;
-
             left->next = right;
             left = leftNextTmp;
-
             right->next = left;
             right = rightNextTmp;
         }
@@ -87,7 +79,6 @@ public:
         vec[i]->next = nullptr;
     }
 };
-
 void printList(ListNode *head)
 {
     while (nullptr != head)
@@ -97,7 +88,6 @@ void printList(ListNode *head)
     }
     cout << "(null)" << endl;
 }
-
 int main()
 {
     Solution solution;

@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
 class Solution
 {
 public:
@@ -25,11 +23,9 @@ public:
         return nums;
     }
 };
-
 int main()
 {
     vector<int> nums = {8, 1, 2, 2, 3};
-
     Solution s;
     auto res = s.smallerNumbersThanCurrent(nums);
     for (auto num : res)

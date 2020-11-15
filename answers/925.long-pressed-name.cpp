@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
-
 class Solution
 {
 public:
@@ -17,7 +15,6 @@ public:
         {
             return false;
         }
-
         int i = 0, j = 0;
         while (j < typedLength)
         {
@@ -38,7 +35,6 @@ public:
         return (i == nameLength);
     }
 };
-
 int main()
 {
     Solution solution;

@@ -1,9 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 using namespace std;
-
 // Definition for a binary tree node.
 struct TreeNode
 {
@@ -12,7 +10,6 @@ struct TreeNode
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -24,12 +21,9 @@ public:
         {
             return 0;
         }
-
         string path;
         vector<int> nums;
-
         getNums(root, path, nums);
-
         int res = 0;
         for (auto num : nums)
         {
@@ -55,17 +49,14 @@ public:
                 getNums(root->right, path, nums);
             }
         }
-
         path.pop_back();
     }
 };
-
 int main()
 {
     Solution so;
     TreeNode *root = new TreeNode(1);
     root->left = new TreeNode(2);
-
     cout << so.sumNumbers(root) << endl;
     return 0;
 }

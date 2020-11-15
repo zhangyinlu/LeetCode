@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 //Definition for a binary tree node.
 struct TreeNode
 {
@@ -10,7 +8,6 @@ struct TreeNode
     TreeNode* right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 class Solution
 {
 public:
@@ -28,7 +25,6 @@ public:
         return true;
     }
 };
-
 int main()
 {
     Solution solution;
@@ -36,8 +32,6 @@ int main()
     root1->left = new TreeNode(2);
     root1->left->left = new TreeNode(3);
     root1->left->right = new TreeNode(4);
-
     cout << (solution.isValidBST(root1) ? "true" : "false") << endl;
-
     return 0;
 }
